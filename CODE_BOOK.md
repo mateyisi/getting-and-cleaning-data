@@ -20,9 +20,9 @@ The code consists of two main functions:
  
  The second function take as an input the clearn 'Allmerged' data and perform the following processing tasks:
  
-  -Turn subject and activities into factors
-  -use the subjec and activity factors to melt the data
-  -calculate the tidy data of means and standard devition per subject and actity by averaging per subject
+  * Turn subject and activities into factors
+  * use the subjec and activity factors to melt the data
+  * calculate the tidy data of means and standard devition per subject and actity by averaging per subject
    for a given activity label of the melt data.
  
  The output tidy data is derived by calling the two functions and the output is store in a text file.
