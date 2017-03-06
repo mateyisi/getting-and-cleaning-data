@@ -1,41 +1,42 @@
 # Tidy data
 
-The submitted tidy data is obtained by averaging over a vector containing 128 - Features that are normalized and bounded within [-1,1].
-since samples on the data contain repeated meansurements of one subject for the same activity, an effective
-value of average accelation and standard deviation is obtain by averaging over the values belonging to 
-the same subject for a given activity. This is done for all activity labels.
+The submitted tidy data is obtained by averaging over subject data per activity - Features 
 
-The dity data columns are as follows:
+Each sample contains the effective values that are normalized and bounded within [-1,1] for the features:
 
-1. Subjects: 
-        -This gives a  uniqure integer identifier for each subjects.
+[1] "subject", "activity" "tBodyAccMeanX"                "tBodyAccMeanY"                "tBodyAccMeanZ"               
+[6] "tBodyAccStdX"                 "tBodyAccStdY"                 "tBodyAccStdZ"                
+[9] "tGravityAccMeanX"             "tGravityAccMeanY"             "tGravityAccMeanZ"            
+[12] "tGravityAccStdX"              "tGravityAccStdY"              "tGravityAccStdZ"             
+[15] "tBodyAccJerkMeanX"            "tBodyAccJerkMeanY"            "tBodyAccJerkMeanZ"           
+[18] "tBodyAccJerkStdX"             "tBodyAccJerkStdY"             "tBodyAccJerkStdZ"            
+[21] "tBodyGyroMeanX"               "tBodyGyroMeanY"               "tBodyGyroMeanZ"              
+[23] "tBodyGyroStdX"                "tBodyGyroStdY"                "tBodyGyroStdZ"               
+[27] "tBodyGyroJerkMeanX"           "tBodyGyroJerkMeanY"           "tBodyGyroJerkMeanZ"          
+[20] "tBodyGyroJerkStdX"            "tBodyGyroJerkStdY"            "tBodyGyroJerkStdZ"           
+[32] "tBodyAccMagMean"              "tBodyAccMagStd"               "tGravityAccMagMean"          
+[36] "tGravityAccMagStd"            "tBodyAccJerkMagMean"          "tBodyAccJerkMagStd"          
+[40] "tBodyGyroMagMean"             "tBodyGyroMagStd"              "tBodyGyroJerkMagMean"        
+[42] "tBodyGyroJerkMagStd"          "fBodyAccMeanX"                "fBodyAccMeanY"               
+[45] "fBodyAccMeanZ"                "fBodyAccStdX"                 "fBodyAccStdY"                
+[47] "fBodyAccStdZ"                 "fBodyAccMeanFreqX"            "fBodyAccMeanFreqY"           
+[51] "fBodyAccMeanFreqZ"            "fBodyAccJerkMeanX"            "fBodyAccJerkMeanY"           
+[54] "fBodyAccJerkMeanZ"            "fBodyAccJerkStdX"             "fBodyAccJerkStdY"            
+[57] "fBodyAccJerkStdZ"             "fBodyAccJerkMeanFreqX"        "fBodyAccJerkMeanFreqY"       
+[59] "fBodyAccJerkMeanFreqZ"        "fBodyGyroMeanX"               "fBodyGyroMeanY"              
+[63] "fBodyGyroMeanZ"               "fBodyGyroStdX"                "fBodyGyroStdY"               
+[66] "fBodyGyroStdZ"                "fBodyGyroMeanFreqX"           "fBodyGyroMeanFreqY"          
+[69] "fBodyGyroMeanFreqZ"           "fBodyAccMagMean"              "fBodyAccMagStd"              
+[72] "fBodyAccMagMeanFreq"          "fBodyBodyAccJerkMagMean"      "fBodyBodyAccJerkMagStd"      
+[75] "fBodyBodyAccJerkMagMeanFreq"  "fBodyBodyGyroMagMean"         "fBodyBodyGyroMagStd"         
+[78] "fBodyBodyGyroMagMeanFreq"     "fBodyBodyGyroJerkMagMean"     "fBodyBodyGyroJerkMagStd"     
+[81] "fBodyBodyGyroJerkMagMeanFreq"
 
-2. WALKING_UNSPECIFIED.mn: 
-        - mean accelation in units of gravity for acitivity label WALKING .
+The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
+while the features with the _Gyro_ i.e from The gyroscope units are rad/seg. 
 
-3. WALKING_UPSTAIRS.mn     
-         - mean accelation in units of gravity for acitivity label WALKING.
 
-4. WALKING_DOWNSTAIRS.mn   
-          - mean accelation in units of gravity for acitivity label WALKING.
 
-5. SITTING.mn              
-         - mean accelation in units of gravity for acitivity label WALKING.
-6. STANDING.mn             
-         - mean accelation in units of gravity for acitivity label WALKING.
-7. LAYING.mn               
-         - mean accelation in units of gravity for acitivity label WALKING.
-8. WALKING_UNSPECIFIED.sd  
-        - effective standard deviation for acitivity label WALKING in units of gravity.
-9. WALKING_UPSTAIRS.sd     
-         - effective standard deviation in units of gravity for activity label WALKING_UPSTAIRS.
-10. WALKING_DOWNSTAIRS.sd  
-         - effective standard deviation in units of gravity for activity label WALKING_DOWNSTAIRS.
-14. SITTING.sd             
-         - effective standard deviationin units of gravity for activity label SITTING.
-15. STANDING.sd            
-        - effective standard deviationin units of gravity for activity label STANDING.
-16. LAYING.sd              
-         - effective standard deviation in units of gravity for activity label LAYING..
+
 
 
