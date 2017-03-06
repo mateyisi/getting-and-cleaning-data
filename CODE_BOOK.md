@@ -8,25 +8,24 @@ The code consists of two main functions:
  The first function takes as input the path to the working directory. 
  
  The function does the following tasks:
- * load the subject_test.txt, subject_train.txt, y_test.txt,y subject.txt into
- data tables. 
- * read the X_test.txt and X_train.tx line by line and each line and converts the data in each line into a numeric feacture vector. An average acceleration and and standard deviation is calculated from the feature vector for each sample and stored in a table.
- * put together the subject, activity and the feature mean and standard deviation into a single file. This is done for both the test data and the train data.
+
+ * take the path to the working director where the downloaded data is saved as an input
+  It then loads data from the text files for  acitivit_labels, feature as well as y_train, Y_test and X_train
+  data.class
+  
+  * row combines subject, activity and further column combines restult with the repecti x_trainand and y_train data. 
+  
+  * The features corresponding to mean or standard deviation are selected and their indices are used to select 
+     columns for needed the combined subject, activity and train and test data.
  
- * The data tables the above step are then combined into a sinle clearn data file call 'Allmerged'
+ The second function take as an input the clearn 'Allmerged' data and perform the following processing tasks:
  
- The second function take as an input the clearn 'Allmerged' data:
+  -Turn subject and activities into factors
+  -use the subjec and activity factors to melt the data
+  -calculate the tidy data of means and standard devition per subject and actity by averaging per subject
+   for a given activity label of the melt data.
  
- The function does the following processing tasks:
- 
- * split the data into activities labels
- * data from the obove step is then split according to subject. 
- * for each subject and effective value of the mean accelation and standard deviation
-   per activity per subject is calculated.
- * The averaged feature values per all 30 subject for each activity is store into an indepenent matrix.
- * The matrices are then cobined into a data frame called 'tidyData'
- 
- The output data is stored in the working directory as text file.
+ The output tidy data is derived by calling the two functions and the output is store in a text file.
  
  
  
