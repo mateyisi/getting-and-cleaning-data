@@ -4,8 +4,8 @@ The code consists of two main functions:
    * getMergedData
    * getAcitvityTidyData
    
- The first function access the downloaded sumsung data from the working directry.
- It takes an input the path to the working directory. 
+ 
+ The first function takes as input the path to the working directory. 
  
  The function does the following tasks:
  * load the subject_test.txt, subject_train.txt, y_test.txt,y subject.txt into
@@ -14,6 +14,18 @@ The code consists of two main functions:
  * put together the subject, activity and the feature mean and standard deviation into a single file. This is done for both the test data and the train data.
  
  * The data tables the above step are then combined into a sinle clearn data file call 'Allmerged'
+ 
+ The second function take as an input the clearn 'Allmerged' data:
+ 
+ The function does the following processing tasks:
+ 
+ * split the data into activities labels
+ * split the data into per activity label by subject and get an effective value of the mean accelation and standard deviation
+   per activity per subject.
+ * The data is put into a data frame called 'tidyData'
+ 
+ The output data is stored in the working directory as text file.
+ 
  
  
  
