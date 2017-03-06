@@ -20,10 +20,11 @@ The code consists of two main functions:
  The function does the following processing tasks:
  
  * split the data into activities labels
- * data from the obove step is then split subject and effective value of the mean accelation and standard deviation
+ * data from the obove step is then split according to subject. 
+ * for each subject and effective value of the mean accelation and standard deviation
    per activity per subject is calculated.
- * The averaged feature values for all activities is store into indepenent matrices.
- * The matrices are then put into a data frame called 'tidyData'
+ * The averaged feature values per all 30 subject for each activity is store into an indepenent matrix.
+ * The matrices are then cobined into a data frame called 'tidyData'
  
  The output data is stored in the working directory as text file.
  
